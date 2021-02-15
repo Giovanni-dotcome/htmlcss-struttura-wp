@@ -1,51 +1,73 @@
+/* general */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    padding: 10px 0;
-    text-align: center;
 }
-.clearfix {
+.clearfix::after {
     content: "";
     display: table;
     clear: both;
 }
-.wrapper > *{
-    width: 80%;
-    margin: auto;
-}
-header {
-    height: 20vh;
-    background-color: fuchsia;
-}
-main .first{
-    height: 35vh;
-    background-color: gold;
-    margin-bottom: 10px;
-}
-main .second {
-    background-color: #0000ff;
-    height: 35vh;
-    width: 100%;
-    padding: 0;
-    padding-bottom: 10px;
 
+/* page's wrapper */
+.wrapper {
+    max-width: 820px;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
 }
-main .second .primo{
-    background-color: #add8e6;
-    height: 10vh;
+
+/* header */
+header {
+    background-color: mediumorchid;
+    height: 60px;
 }
-main .second .secondo > *{
-    background-color: lightblue;
-    height: 60vh;
-    width: 32.65%;
+
+/* main rows */
+.main_row {
+    height: 300px;
+    margin: 10px 0;
+}
+.main_row.first{
+    background-color: gold;
+}
+.main_row.second{
+    background-color: blue;
+}
+
+/* sub rows */
+.main_row .sub_row {
+    margin-bottom: 2%;
+}
+.main_row .sub_row.first {
+    background-color: cornflowerblue;
+    height: 10%;
+}
+.main_row .sub_row.second {
+    height: 82%;
+}
+
+/* sub row's columns */
+.main_row .sub_row.second .col{
+    height: 100%;
     float: left;
+    background-color: cornflowerblue;
 }
+.col.left {
+    margin-right: 2.5%;
+    width: 25%;
+}   
+.col.center {
+    width: 45%;
+}
+.col.right {
+    margin-left: 2.5%;
+    width: 25%;
+} 
+
+/* footer */
 footer {
-    background-color: mediumslateblue;
-    height: 10vh;
-}
-.primero {
-    margin-right: 1%;
-}
-.tercero {
-    margin-left: 1%;
+    background-color:mediumslateblue;
+    height: 30px;
 }
